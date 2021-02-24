@@ -14,7 +14,8 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 output application/json
 ---
 {
-	Message : "you have reached map operations"
+	Message : "you have reached map operations  " ++ p('secure::cloudHubDeployment.username')
+	
 }]]></ee:set-payload>
 					</ee:message>
 				</ee:transform>
@@ -28,7 +29,7 @@ output application/json
 output application/json
 ---
 {
-	Message : "you have reached default block"
+	Message : "you have reached default block  " ++ p('secure::cloudHubDeployment.password')
 }]]></ee:set-payload>
 					</ee:message>
 				</ee:transform>
