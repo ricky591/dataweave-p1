@@ -33,12 +33,17 @@
 					<cloudHubDeployment>
 			            <uri>https://anypoint.mulesoft.com</uri>
 			            <muleVersion>4.3.0</muleVersion>
-			            <username>${secure::cloudHubDeployment.username}</username>
-			            <password>${secure::cloudHubDeployment.password}</password>
+			            <username>${cloudHubDeployment.username}</username>
+			            <password>${cloudHubDeployment.password}</password>
 			            <applicationName>dataweave-p1</applicationName>
 			            <environment>Sandbox</environment>
 			            <workerType>MICRO</workerType>
 			            <objectStoreV2>true</objectStoreV2>
+			            <properties>
+			            	<secure>
+			            		<key>1234567891234567</key>
+			            	</secure>
+						</properties>
 			        </cloudHubDeployment>
 				</configuration>
 			</plugin>
