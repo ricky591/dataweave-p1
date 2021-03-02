@@ -33,8 +33,8 @@
 					<cloudHubDeployment>
 			            <uri>https://anypoint.mulesoft.com</uri>
 			            <muleVersion>4.3.0</muleVersion>
-			            <username>${cloudHubDeployment.username}</username>
-			            <password>${cloudHubDeployment.password}</password>
+			            <username>ricky02022021</username>
+			            <password>Ricky2021</password>
 			            <applicationName>dataweave-p1</applicationName>
 			            <environment>Sandbox</environment>
 			            <workerType>MICRO</workerType>
@@ -47,7 +47,17 @@
 			        </cloudHubDeployment>
 				</configuration>
 			</plugin>
-		</plugins>
+		<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <compilerArgs>
+                        <args>-parameters</args>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
 	</build>
 
 	<dependencies>
@@ -73,6 +83,12 @@
             <groupId>com.mulesoft.modules</groupId>
             <artifactId>mule-secure-configuration-property-module</artifactId>
             <version>1.2.3</version>
+            <classifier>mule-plugin</classifier>
+        </dependency>
+    	<dependency>
+            <groupId>org.mule.module</groupId>
+            <artifactId>mule-java-module</artifactId>
+            <version>1.2.6</version>
             <classifier>mule-plugin</classifier>
         </dependency>
     </dependencies>
